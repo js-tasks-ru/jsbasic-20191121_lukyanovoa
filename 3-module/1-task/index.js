@@ -5,4 +5,7 @@
  * @returns {string}
  */
 function showSalary(data, age) {
+  let sorted = data.filter(item => item.age <= age);
+  let result = sorted.map(item => item.name + ', ' + item.balance);
+  return result.join('\n');
 }
